@@ -7,6 +7,8 @@ def index(request):
 
 def index1(request):
     context = {
-        "time": strftime("%Y-%m-%d %H:%M %p", gmtime())
+        "date": strftime("%Y-%m-%d ", gmtime()),
+        "time": strftime("%H:%M %p",gmtime())
+
     }
     return render(request,'index.html', context)
